@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knjige</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap"
+    />
+  </head>
+  <body onload="ucitaj()">
+    <div id="page" style="width: 1100px">
+      <!-- header -->
+      <div id="header">
+        <h1>Fenix</h1>
+
+        <div class="inside_header1">
+          <p>Probudi vatru u sebi, i poleti ka novom saznanju.</p>
+        </div>
+      </div>
+      <!-- navbar -->
+      <div id="navbar">
+        <a href="index.html"> Početna </a>
+        <a href="books.html"> Knjige </a>
+        <a href="giftcards.html"> Gift Kartice</a>
+      </div>
+
+      <div id="cont-books">
+        <!-- pocetak levog diva -->
+        <div id="left-div">
+          <p id="p-search">Pretraga</p>
+          <input
+            type="text"
+            id="inp-search"
+            onkeyup="searchBooks()"
+            placeholder="Naziv knjige ili ime autora"
+          />
+          <p id="p-categories">Kategorije</p>
+          <div class="category_div" id="div-sve" onclick="filterBooks('Sve')">
+            Sve
+          </div>
+          <div
+            class="category_div"
+            id="div-autobio"
+            onclick="filterBooks('Autobiografija')"
+          >
+            Autobiografija
+          </div>
+          <div
+            class="category_div"
+            id="div-domaca"
+            onclick="filterBooks('Domaca')"
+          >
+            Domaća literatura
+          </div>
+          <div
+            class="category_div"
+            id="div-ekran"
+            onclick="filterBooks('Ekranizovane')"
+          >
+            Ekranizovane knjige
+          </div>
+          <div
+            class="category_div"
+            id="div-horor"
+            onclick="filterBooks('Horor')"
+          >
+            Horor
+          </div>
+          <div
+            class="category_div"
+            id="div-ljubavni"
+            onclick="filterBooks('Ljubavni')"
+          >
+            Ljubavni
+          </div>
+          <div
+            class="category_div"
+            id="div-naucnafan"
+            onclick="filterBooks('Naucna_fantastika')"
+          >
+            Naučna fantastika
+          </div>
+          <div
+            class="category_div"
+            id="div-putopisi"
+            onclick="filterBooks('Putopisi')"
+          >
+            Putopisi
+          </div>
+        </div>
+        <!-- kraj levog diva -->
+        <!-- pocetak centralnog diva -->
+        <div id="center-div">
+          <div id="center-div-naslov"></div>
+          <div id="center-div-books"></div>
+        </div>
+        <!-- kraj centralnog diva -->
+        <!-- pocetak desnog diva -->
+        <div id="right-div">
+          <!-- korpa -->
+          <p id="naslov_korpa">E-korpa</p>
+          <table id="tabela_korpa"></table>
+          <p id="ukupna_cena_korpa">Izaberite knjigu</p>
+          <div id="div_za_dugme"></div>
+        </div>
+        <!-- pocetak desnog diva -->
+      </div>
+      <div id="footer">
+        <span id="span_footer">Katarina Dimitrijević 44/2022 </span>
+      </div>
+    </div>
+  </body>
+</html>
